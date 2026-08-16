@@ -1,5 +1,28 @@
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
+const FEATURES = [
+  {
+    title: "Address & trustline validation",
+    description:
+      "Every recipient is checked against Stellar RPC before you sign anything — invalid addresses, missing trustlines, and underfunded accounts are flagged upfront.",
+  },
+  {
+    title: "Automatic transaction batching",
+    description:
+      "Stellar caps a transaction at 100 operations. MultiSend chunks large recipient lists into multiple transactions and sequences them for you.",
+  },
+  {
+    title: "Non-custodial by design",
+    description:
+      "Connect any Stellar Wallets Kit-supported wallet — Freighter, xBull, Lobstr, Albedo, Rabet. Your keys never leave your wallet.",
+  },
+  {
+    title: "Status tracking & retry",
+    description:
+      "Watch each payment's status live. If a transaction fails, retry only the failed recipients — successful payments are never touched.",
+  },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
@@ -28,6 +51,15 @@ export default function Home() {
         >
           Start a batch
         </a>
+      </section>
+
+      <section className="mx-auto grid max-w-4xl grid-cols-1 gap-8 px-6 py-12 sm:grid-cols-2">
+        {FEATURES.map((f) => (
+          <div key={f.title} className="flex flex-col gap-2">
+            <h3 className="font-semibold">{f.title}</h3>
+            <p className="text-sm text-neutral-600 dark:text-neutral-400">{f.description}</p>
+          </div>
+        ))}
       </section>
     </div>
   );
