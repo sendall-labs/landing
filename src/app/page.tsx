@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 
 const FEATURES = [
@@ -81,6 +83,13 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <footer className="mt-auto flex items-center justify-between border-t border-neutral-200 px-6 py-6 text-sm text-neutral-500 dark:border-neutral-800">
+        <span>MultiSend</span>
+        <Link href={APP_URL} className="hover:underline">
+          Open app
+        </Link>
+      </footer>
     </div>
   );
 }
