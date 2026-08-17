@@ -15,8 +15,8 @@ export default function OpengraphImage() {
           alignItems: "center",
           justifyContent: "center",
           gap: 24,
-          background: "#fdfbf7",
-          color: "#292420",
+          background: "#f7f5f0",
+          color: "#1c1917",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
@@ -25,7 +25,7 @@ export default function OpengraphImage() {
               width: 72,
               height: 72,
               borderRadius: 20,
-              background: "#d97706",
+              background: "#1d4ed8",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -40,8 +40,8 @@ export default function OpengraphImage() {
           </div>
           <span style={{ fontSize: 72, fontWeight: 700 }}>sendall</span>
         </div>
-        <span style={{ fontSize: 32, color: "#78716c" }}>
-          Bulk Stellar payments, without the backend
+        <span style={{ fontSize: 32, color: "#6b6558" }}>
+          Non-custodial bulk payments on Stellar
         </span>
       </div>
     ),
