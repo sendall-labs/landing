@@ -23,6 +23,13 @@ const FEATURES = [
   },
 ];
 
+const STEPS = [
+  { step: "1", title: "Connect your wallet", description: "Sign in with any supported Stellar wallet — no account or password needed." },
+  { step: "2", title: "Upload a CSV", description: "List destination addresses, amounts, and optional memos." },
+  { step: "3", title: "Review & check", description: "MultiSend validates every row and checks balances/trustlines against the network." },
+  { step: "4", title: "Sign & send", description: "Approve each transaction in your wallet. Track status and retry any failures." },
+];
+
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
@@ -60,6 +67,19 @@ export default function Home() {
             <p className="text-sm text-neutral-600 dark:text-neutral-400">{f.description}</p>
           </div>
         ))}
+      </section>
+
+      <section className="mx-auto flex max-w-4xl flex-col gap-8 px-6 py-16">
+        <h2 className="text-center text-2xl font-bold">How it works</h2>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-4">
+          {STEPS.map((s) => (
+            <div key={s.step} className="flex flex-col gap-2">
+              <span className="text-sm font-mono text-neutral-400">{s.step}</span>
+              <h3 className="font-semibold">{s.title}</h3>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400">{s.description}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
