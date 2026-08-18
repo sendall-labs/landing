@@ -12,23 +12,26 @@ export const STEPS = [
   },
   {
     step: "2",
-    title: "Address format is checked",
+    title: "We check every address",
     description:
-      "Every address is validated against the Stellar format before anything else happens.",
+      "Format, validity, and duplicate rows are flagged before anything else happens.",
   },
   {
     step: "3",
-    title: "Active accounts are confirmed",
+    title: "We confirm the account is live",
     description:
-      "Each address is checked on-chain to make sure it can actually receive the payment.",
+      "Each address is checked on-chain, so you're not paying to send to one that can't receive it.",
   },
   {
     step: "4",
-    title: "Payments are batched and sent",
+    title: "We batch it, you sign",
     description:
       "Recipients are grouped into transactions automatically. You approve once per group, in your own wallet.",
   },
 ];
+
+export const STEPS_PAYOFF =
+  "Every check runs before you sign. A bad address gets caught up front, not after you've already paid for it.";
 
 export const BENEFITS = [
   {

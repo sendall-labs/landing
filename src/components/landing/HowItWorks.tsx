@@ -1,5 +1,5 @@
 import { CheckSquare, PackageCheck, Search, UploadCloud } from "lucide-react";
-import { STEPS } from "@/lib/content";
+import { STEPS, STEPS_PAYOFF } from "@/lib/content";
 
 const ICONS = [UploadCloud, CheckSquare, Search, PackageCheck];
 
@@ -31,6 +31,9 @@ export function HowItWorks() {
             );
           })}
         </div>
+        <p className="mt-14 border-t border-border pt-8 text-base font-medium">
+          {STEPS_PAYOFF}
+        </p>
       </div>
     </section>
   );
