@@ -7,6 +7,11 @@ export function Header() {
   return (
     <header className="flex items-center justify-between px-6 py-5">
       <Wordmark className="text-base" />
+      <nav className="hidden items-center gap-6 text-sm text-muted-foreground sm:flex">
+        <a href="#how-it-works" className="hover:text-foreground">
+          How it works
+        </a>
+      </nav>
       <div className="flex items-center gap-3">
         <ThemeToggle />
         <a
