@@ -1,5 +1,5 @@
 import { ShieldCheck } from "lucide-react";
-import { SECURITY } from "@/lib/content";
+import { SECURITY, WALLETS } from "@/lib/content";
 
 export function Security() {
   return (
@@ -10,6 +10,9 @@ export function Security() {
           <h2 className="text-2xl font-bold">{SECURITY.title}</h2>
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
             {SECURITY.description}
+          </p>
+          <p className="text-xs text-muted-foreground">
+            Works with {WALLETS.map((w) => w.name).join(", ")}.
           </p>
         </div>
       </div>
