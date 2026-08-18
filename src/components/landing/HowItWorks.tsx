@@ -5,7 +5,7 @@ const ICONS = [UploadCloud, CheckSquare, Search, PackageCheck];
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="border-t border-border">
+    <section id="how-it-works" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
         <h2 className="mb-12 text-2xl font-bold">How it works</h2>
         <div className="relative grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
@@ -18,7 +18,7 @@ export function HowItWorks() {
             return (
               <div key={step.step} className="relative flex flex-col gap-3">
                 <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-accent bg-background text-accent">
-                  <Icon className="h-4 w-4" />
+                  <Icon aria-hidden="true" className="h-4 w-4" />
                 </div>
                 <span className="font-mono text-xs text-muted-foreground">
                   Step {step.step}

@@ -14,7 +14,7 @@ export function Benefits() {
             return (
               <div key={benefit.title} className="flex gap-4">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md bg-accent/10 text-accent">
-                  <Icon className="h-4 w-4" />
+                  <Icon aria-hidden="true" className="h-4 w-4" />
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <h3 className="font-semibold">{benefit.title}</h3>

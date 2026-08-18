@@ -25,7 +25,11 @@ export function ThemeToggle() {
       aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
       className="flex h-9 w-9 items-center justify-center rounded-md border border-border text-foreground hover:bg-muted transition-colors"
     >
-      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+      {isDark ? (
+        <Sun aria-hidden="true" className="h-4 w-4" />
+      ) : (
+        <Moon aria-hidden="true" className="h-4 w-4" />
+      )}
     </button>
   );
 }

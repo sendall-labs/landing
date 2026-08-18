@@ -83,5 +83,4 @@ export const CLOSE = {
   sub: "Connect your wallet and upload a recipient list to get started.",
 };
 
-export const SPEC_NOTE =
-  "Works on Testnet for trying it out, and on Mainnet for real payments. Up to 5,000 recipients per batch.";
+export const SPEC_NOTE = "Works on Testnet for trying it out, and on Mainnet for real payments.";

@@ -14,7 +14,7 @@ export function Stats() {
               key={stat.label}
               className="flex flex-col items-center gap-2 rounded-md border border-border bg-background px-4 py-6 text-center"
             >
-              <Icon className="h-4 w-4 text-accent" />
+              <Icon aria-hidden="true" className="h-4 w-4 text-accent" />
               <span className="font-mono text-xl font-semibold sm:text-2xl">
                 {stat.value}
               </span>
