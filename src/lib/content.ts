@@ -59,7 +59,21 @@ export const SECURITY = {
     "sendall builds each transaction but never signs it. You approve every payment yourself, from a wallet you already trust.",
 };
 
-export const WALLETS = ["Freighter", "xBull", "Albedo", "Lobstr", "Rabet", "Hot Wallet"];
+export const WALLETS = [
+  { name: "Freighter", initial: "F", color: "#7C5CFC" },
+  { name: "xBull", initial: "X", color: "#E08A2C" },
+  { name: "Albedo", initial: "A", color: "#2C6FE0" },
+  { name: "Lobstr", initial: "L", color: "#1FA37A" },
+  { name: "Rabet", initial: "R", color: "#D94F70" },
+  { name: "Hot Wallet", initial: "H", color: "#C24A2C" },
+];
+
+export const STATS = [
+  { label: "Recipients per batch", value: "5,000" },
+  { label: "Operations per transaction", value: "100" },
+  { label: "Network fee per payment", value: "<$0.001" },
+  { label: "Wallets supported", value: "6" },
+];
 
 export const CLOSE = {
   line: "Ready to send your first batch?",

@@ -1,5 +1,5 @@
 import { ShieldCheck } from "lucide-react";
-import { SECURITY, WALLETS } from "@/lib/content";
+import { SECURITY } from "@/lib/content";
 
 export function Security() {
   return (
@@ -11,16 +11,6 @@ export function Security() {
           <p className="max-w-xl text-base leading-relaxed text-muted-foreground">
             {SECURITY.description}
           </p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {WALLETS.map((wallet) => (
-              <span
-                key={wallet}
-                className="rounded-full border border-border bg-background px-3 py-1 font-mono text-xs"
-              >
-                {wallet}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

@@ -42,27 +42,33 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="rounded-lg border border-border bg-muted/40 p-4 shadow-sm">
-        <div className="mb-3 flex items-center justify-between">
-          <span className="text-sm font-medium">recipients.csv</span>
-          <span className="rounded-sm bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
-            Sign batch (4 of 4)
-          </span>
-        </div>
-        <div className="flex flex-col divide-y divide-border">
-          {MOCK_ROWS.map((row) => {
-            const { icon: Icon, className } = STATUS_STYLE[row.status];
-            return (
-              <div
-                key={row.address}
-                className="flex items-center justify-between gap-3 py-2.5 font-mono text-sm"
-              >
-                <span className="text-muted-foreground">{row.address}</span>
-                <span className="hidden sm:inline">{row.amount}</span>
-                <Icon className={`h-4 w-4 shrink-0 ${className}`} />
-              </div>
-            );
-          })}
+      <div className="relative">
+        <div
+          aria-hidden
+          className="absolute -inset-6 -z-10 rounded-2xl bg-accent/10 blur-2xl"
+        />
+        <div className="rounded-lg border border-border bg-muted/40 p-4 shadow-lg shadow-black/5">
+          <div className="mb-3 flex items-center justify-between">
+            <span className="text-sm font-medium">recipients.csv</span>
+            <span className="rounded-sm bg-accent px-3 py-1 text-xs font-medium text-accent-foreground">
+              Sign batch (4 of 4)
+            </span>
+          </div>
+          <div className="flex flex-col divide-y divide-border">
+            {MOCK_ROWS.map((row) => {
+              const { icon: Icon, className } = STATUS_STYLE[row.status];
+              return (
+                <div
+                  key={row.address}
+                  className="flex items-center justify-between gap-3 py-2.5 font-mono text-sm"
+                >
+                  <span className="text-muted-foreground">{row.address}</span>
+                  <span className="hidden sm:inline">{row.amount}</span>
+                  <Icon className={`h-4 w-4 shrink-0 ${className}`} />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
