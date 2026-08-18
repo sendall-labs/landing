@@ -47,9 +47,9 @@ export const BENEFITS = [
       "sendall never holds your funds or your keys. Every payment is signed in your own wallet.",
   },
   {
-    title: "Built on Stellar",
+    title: "No platform fees",
     description:
-      "Fast, low-cost payments in XLM or any asset your recipients already hold.",
+      "You only pay the Stellar network's own fee, a fraction of a cent per transaction. sendall doesn't add a service fee on top.",
   },
 ];
 
